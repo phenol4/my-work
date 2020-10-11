@@ -1,0 +1,140 @@
+input{
+    display: none;
+}
+
+.open{
+    position: relative;
+    top: 15px;
+    left: 8px;
+    display: block;
+    width: 26px;
+    height: 5px;
+    background-color: #e91e63;
+    border-radius: 0.4em;
+}
+
+.open:before{
+    content: "";
+    position: relative;
+    top: -8px;
+    left: 0px;
+    display: block;
+    width: 26px;
+    height: 5px;
+    background-color: #e91e63;
+    border-radius: 0.4em;
+    transform: rotate(0deg);
+    transition: all 0.5s ease-out;
+}
+
+.open:after{
+    content: "";
+    position: relative;
+    top: 3px;
+    left: 0;
+    display: block;
+    width: 26px;
+    height: 5px;
+    background-color: #e91e63;
+    transform: rotate(0deg);
+    transition: all 0.5s ease-out;
+}
+
+.menuOpen{
+    display: block;
+    top: 10px;
+    width: 50px;
+    height: 40px;
+   /* background-color: #e91e63;*/
+    float: right;
+    /*border-radius: 50%;*/
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 70%;
+    background-color: transparent;
+    padding: 15px;
+    width: 48vw;
+    height: 80vh;
+}
+
+.menu .menuContent{
+    position: relative;
+    top: 5%;
+    text-align: left;
+    font-size: 12px;
+}
+
+.menu .menuContent ul li{
+    padding-bottom: 40px;
+    list-style: none;
+}
+
+.menu .menuContent ul li a{
+    text-decoration: none;
+    color: #e91e63;
+    font-weight: bolder;
+    text-transform: uppercase;
+    transition: color 1.5s ease-in,font-size 1s ease-out,font-weight 1s ease-in-out;
+}
+
+.menu .menuContent ul li a:focus{
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+.overall{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 15vh;
+    background-color: #fff:
+   /* background-blend-mode: screen;*/
+}
+
+.menuEffect{
+   opacity: 0;
+   visibility: hidden;
+   transition: all 1s ease-in;
+}
+
+#Toggler:checked~.menuEffect{
+    opacity: 1;
+    visibility: visible;
+}
+
+.menuEffect ul{
+    transform: translateY(0%);
+    transition: all 1s ease;
+}
+
+#Toggler:checked~.menuEffect ul{
+    transform: translateY(10%);
+}
+
+#Toggler:checked~.menuOpen .open{
+    background-color: transparent;
+}
+
+#Toggler:checked~.menuOpen .open:before{
+    transform: rotate(45deg);
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+#Toggler:checked~.menuOpen .open:after{
+    transform: rotate(-45deg);
+    background-color: #fff;
+    position: relative;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+
+

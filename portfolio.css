@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body{
+    /*background: radial-gradient(#525252, #131313);*/
+    background-color: #000;
+    color: #fff;
+}
+
+.container{
+}
+
+.header{
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+/*.header{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 15px 0px;
+    background-color: #000;
+    margin: auto;
+    color: white;
+    position: fixed;
+    margin-top: 0;
+    height: 20%;
+}*/
+
+/*.header ul{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}*/
+
+.header ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color:#fff;
+    font-size: 14px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #000;
+}
+
+.content p{
+    margin-bottom: 30px;
+    word-spacing: 0.3em;
+    /*text-transform: capitalize;*/
+}
+
+#bold{
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+
+
+.fish{
+    color: #e91e63;
+    font-weight: bolder;
+}
+
+button{
+    position: relative;
+    width: 30%; 
+    padding: 10px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0.4em;
+    color: #fff;
+    background-color: #e91e63;
+    border: none;
+    transition: background-color 1.5s ease-in,border 1.5s ease-in-out,color 1.5s ease-out;
+    animation-name: moses;
+    animation-duration: 3s ;
+    animation-timing-function: ease-out;
+    animation-fill-mode: fowards;
+}
+
+@keyframes moses{
+    0%{left: 130%;}
+    25%{left: 90%;}
+    50%{left: 70%;}
+    75%{left: 40%;}
+    100%{left: 0%;}
+}
+
+.btn{
+    transition-property: transform;
+    transition-duration: 2s;
+}
+
+.btn:focus{
+    transform:rotateY(180deg);
+}
+
+
+button:focus{
+    background-color: transparent;
+    color: #e91e63;
+    border: 2px solid #fff;
+    outline: none;
+}
+
